@@ -1,0 +1,77 @@
+body {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    margin: 0;
+    cursor: cell;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 30% 5% 50% auto;
+    grid-template-areas: "header1"
+                         "header2"
+                         "main"
+                         "correctWords"
+
+}
+
+h1 {
+    grid-area: header1;
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 10em;
+    letter-spacing: .4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    grid-area: header2;
+    margin: 0;
+    padding: 5px 0px 0px 0px;
+    font-size: 1.5em;
+    letter-spacing: .7em;
+    text-align: center;
+    color: rgb(0, 152, 254);
+    
+}
+
+#word {
+    grid-area: word;
+    font-size: 8em;
+    margin: 10px 0;
+    font-family: 'Cabin Sketch', cursive;
+    color: rgb(85, 255, 0);
+}
+
+#input {
+    grid-area: input;
+    padding: 10px;
+    text-align: center;
+    width: 800px;
+    height: 100px;
+    border: none;
+    outline: none;
+    border-bottom: 1px rgb(255, 45, 143) dashed;
+    font-size: 8em;
+    font-family: 'Cabin Sketch', cursive;
+    color: rgb(255, 0, 153);
+}
+
+#button {
+    grid-area: button;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    margin: 5px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    color: rgb(115, 0, 255);
+    outline: none;
+    font-weight: bold;
+    
+}
+
+#correctWords {
+    grid-area: correctWords;
+    color: rgb(255, 98, 0);
+}
+
