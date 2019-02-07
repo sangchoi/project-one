@@ -13,7 +13,7 @@ body {
 
 }
 
-h1 {
+#kaboom {
     grid-area: header1;
     margin: 10px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -21,6 +21,7 @@ h1 {
     letter-spacing: .4em;
     font-weight: bold;
     text-align: center;
+    color: black;
 }
 
 h2 {
@@ -70,8 +71,9 @@ h2 {
     
 }
 
-#correctWords {
+#wordCollection {
     grid-area: correctWords;
     color: rgb(255, 98, 0);
+    font-size: 2em;
 }
 
