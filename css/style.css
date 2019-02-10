@@ -1,5 +1,7 @@
 #body1 {
-    background-color: white;
+    background-image: url("https://png2.kisspng.com/sh/dc965772a1d5bb9379eb2abf769ac61e/L0KzQYm3U8E6N5Vnj5H0aYP2gLBuTgRmdJZ7geVyb36wdsPshb11d15mgeQ2Y3zsgH7okwQuepZojNN3Z3zoPcX9TfNtcaFmiuZ8LUXkcoG4hMc5QZVrStUELkW5SYGAVME0OWY3SaYEMUO1QIe7V75xdpg=/kisspng-television-free-to-air-clip-art-rectangle-tv-cliparts-5ab01d789df2c9.569074131521491320647.png"), url("https://images.unsplash.com/photo-1546578284-f415d2b054c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+    background-size: 100%;
+    border-radius: 50px;
     font-family: 'Amatic SC', cursive;
     text-align: center;
     margin: 0;
@@ -7,6 +9,7 @@
     display: grid;
     min-height: 100vh;
     grid-template-rows: 25% 5% 50% 3% 3% 3%;
+    grid-template-columns: 80% 20%;
     grid-template-areas: "header1"
                          "header2"
                          "main"
@@ -16,15 +19,28 @@
 
 }
 
+
 #kaboom {
     grid-area: header1;
-    margin: 10px 0px 0px 0px;
+    margin: 120px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    font-size: 10em;
+    font-size: 4em;
     letter-spacing: .4em;
     font-weight: bold;
     text-align: center;
     color: black;
+    text-align: center;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    50% {letter-spacing: 80px;}
+    50% {font-size: 4.8em;}
+    20% {color: rgb(34, 255, 0);}
+    40% {color: rgb(0, 166, 255);}
+    60% {color: rgb(252, 5, 232);}
+    80% {color: rgb(255, 234, 0);}
+    50% {text-shadow: 10px 20px 30px rgb(17, 1, 1);}
 }
 
 h2 {
@@ -32,7 +48,7 @@ h2 {
     margin: 10px auto;
     padding: 5px 0px 0px 0px;
     font-size: 1.5em;
-    letter-spacing: .7em;
+    letter-spacing: .3em;
     text-align: center;
     color: rgb(0, 152, 254);
     
@@ -40,7 +56,7 @@ h2 {
 
 #word {
     grid-area: word;
-    font-size: 8em;
+    font-size: 7em;
     margin: 10px 0;
     font-family: 'Cabin Sketch', cursive;
     color: rgb(85, 255, 0);
@@ -55,15 +71,16 @@ h2 {
     border: none;
     outline: none;
     border-bottom: 1px rgb(255, 45, 143) dashed;
-    font-size: 8em;
+    font-size: 7em;
     font-family: 'Cabin Sketch', cursive;
     color: rgb(255, 0, 153);
+    background-color: transparent;
 }
 
 #submitButton {
     grid-area: submit;
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 45px;
     border-radius: 30px;
     margin: 5px;
     font-family: 'Amatic SC', cursive;
@@ -75,10 +92,15 @@ h2 {
     display: inline-block;
 }
 
+#submitButton:hover {
+    background-color: #04fc04;
+    
+}
+
 #resetButton {
     grid-area: reset;
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 45px;
     border-radius: 30px;
     margin: 5px;
     font-family: 'Amatic SC', cursive;
@@ -90,19 +112,28 @@ h2 {
     display: inline-block;
 }
 
+#resetButton:hover {
+    background-color: #323432;
+    
+}
+
 #wordCollection1 {
+    margin: 10px 0 0 0;
+    padding: 0;
     grid-area: wordCollection1;
     color: rgb(255, 98, 0);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold; 
     display: inline-block;
     
 }
 
 #wordCollection2 {
+    margin: 10px 0 0 0;
+    padding: 0;
     grid-area: wordCollection2;
     color: rgb(85, 85, 255);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     display: inline-block;
     
@@ -110,10 +141,12 @@ h2 {
 }
 
 #wordCollection3 {
+    margin: 0;
+    padding: 0;
     grid-area: wordCollection3;
-    color: rgb(85, 255, 229);
-    font-size: 2em;
+    color: rgb(16, 123, 50);
+    font-size: 1.5em;
     font-weight: bold;
-    display: inline-block;
+    display: block;
     
 }

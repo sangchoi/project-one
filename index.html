@@ -14,18 +14,19 @@
 
 <body id="body1">
     
+        <main>
     <h1 id="kaboom">Ka-Boom!</h1>
     <h2>YAAAAY! Let's exercise those finger muscles!</h2>
 
-    <main>
+    
         <form id="form1">
 
         <p class="words timer" id="word" ></p>
-        <input type="text" id="input" placeholder="You type here!" value="" autofocus> 
+        <input type="text" id="input" placeholder="You type here!" value="" autofocus autocomplete="off"> 
         <br />
         <br />
         <button type="submit" id="submitButton" value="submit">ENTER</button>
-        <button type="reset" id="resetButton" value="reset">RESET</button>
+        <button type="reset" id="resetButton" value="reset" onclick="document.location.reload()">RESET</button>
         <br />
         <p id="wordCollection1">blah blah blah</p>
         <p id="wordCollection2">blah blah blah</p>

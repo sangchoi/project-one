@@ -4,6 +4,7 @@
 //variables
 var correctWords1 = [];
 var correctWords2 = [];
+var correctWords3 = [];
 var enterButton;
 var matched;
 var newWord = 0;
@@ -14,6 +15,7 @@ var gameLevel = 1;
 // Level One words
 var levelOne = ["cat", "hat", "mat", "bat", "that", "chat", "sat", "fat", "pat", "gnat"];
 var levelTwo = ["hot", "not", "shot", "cot", "dot", "got", "jot", "lot", "pot", "rot"];
+var levelThree = ["it", "bit", "kit", "fit", "hit", "lit", "knit", "pit", "sit", "wit"];
 
 
 // Colors
@@ -33,6 +35,7 @@ var form1 = document.getElementById("form1");
 var form1Reset = document.getElementById("form1").reset();
 var wordCollection1 = document.getElementById("wordCollection1");
 var wordCollection2 = document.getElementById("wordCollection2");
+var wordCollection3 = document.getElementById("wordCollection3");
 var kaboom = document.getElementById("kaboom");
 
 
@@ -55,7 +58,7 @@ function getWord(level) {
             gameLevel = 2;
             getWord(gameLevel);
         }
-    } else {
+    } else if (level ===2) {
         currentWord.style.color = "#5A5AFE";
         randomNumber = Math.floor(Math.random() * levelTwo.length)
         // Replace current word with a random word from the levelOne array
@@ -67,11 +70,25 @@ function getWord(level) {
         if (levelTwo.length > 0) {
             timer = setTimeout(() => getWord(level), 3000);
         } else {
-            currentWord.textContent = "Woohoo~ Let's try again!"
-            console.log("Game Over!");
+            gameLevel = 3;
+            getWord(gameLevel);
         }
+    } else {
+        currentWord.style.color = "rgb(16, 123, 50)";
+        randomNumber = Math.floor(Math.random() * levelThree.length)
+        // Replace current word with a random word from the levelOne array
+        currentWord.textContent = levelThree[randomNumber];
+        kaboom.style.color = colors[randomNum];
+        // Remove current word from levelOne array once shown on screen 
+        levelThree.splice(randomNumber, 1);
+        // Set timer to five seconds if there are still words in the levelOne array
+        if (levelThree.length > 0) {
+            timer = setTimeout(() => getWord(level), 2000);
+        } else {
+            currentWord.textContent = "Let's try again!";
+            console.log("Game Over!");
     }
-}
+}};
 
 
 form1.addEventListener("submit", function(e) {
@@ -87,9 +104,12 @@ form1.addEventListener("submit", function(e) {
             correctWords1.push(inputWord.value);
             // The words in the array will then be collected and shown on the page
             wordCollection1.textContent = "Level One: " + correctWords1;
-        } else {
+        } else if (gameLevel === 2) {
             correctWords2.push(inputWord.value);
-            wordCollection2.textContent = "Level Two: " + correctWords2;
+            wordCollection2.textContent = "\xa0\xa0\xa0\xa0" + "Level Two: " + correctWords2;
+        } else {
+            correctWords3.push(inputWord.value);
+            wordCollection3.textContent = "Level Three: " + correctWords3;
         }
         
         // Clears input value once entered
@@ -112,7 +132,7 @@ form1.addEventListener("submit", function(e) {
 
 form1.addEventListener("reset", function() {
     resetButton = form1Reset;
-})
+});
 
 getWord(gameLevel);
 
