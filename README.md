@@ -18,3 +18,35 @@ Visual Objectives:
     - Ka-boom cloud/poof when they correctly type a word
     - 
 
+Credits:
+
+Sound Effects:
+Title: Laser Canon
+Creator: Mike Koenig
+Website: Soundbible.com
+
+Title: Laser2.wav
+Creator: Sergenious
+Website: Freesound.org
+
+Title: Xylophone 1 Basic
+Creator: SpiceProgram
+Website: Freesound.org
+
+Background Music:
+Title: Realm of Fantasy
+Creator: Eric Matyas
+Website: Soundimage.org
+
+Background Images:
+
+Title: Twinkle Night 8, 2017
+Creator: Produced by LematWorks
+Website: https://lematworks.myportfolio.com
+
+Title: Television
+Creator: N/A
+Website: Kisspng.com
+
+
+

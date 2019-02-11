@@ -1,5 +1,6 @@
+
 #body1 {
-    background-image: url("https://png2.kisspng.com/sh/dc965772a1d5bb9379eb2abf769ac61e/L0KzQYm3U8E6N5Vnj5H0aYP2gLBuTgRmdJZ7geVyb36wdsPshb11d15mgeQ2Y3zsgH7okwQuepZojNN3Z3zoPcX9TfNtcaFmiuZ8LUXkcoG4hMc5QZVrStUELkW5SYGAVME0OWY3SaYEMUO1QIe7V75xdpg=/kisspng-television-free-to-air-clip-art-rectangle-tv-cliparts-5ab01d789df2c9.569074131521491320647.png"), url("https://images.unsplash.com/photo-1546578284-f415d2b054c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+    background-image: url("../img/tv.png"), url("../img/twinkling1.gif");
     background-size: 100%;
     border-radius: 50px;
     font-family: 'Amatic SC', cursive;
