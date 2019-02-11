@@ -112,6 +112,21 @@ h2 {
     display: inline-block;
 }
 
+#musicButton {
+    grid-area: music;
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    margin: 5px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    color: rgb(255, 132, 0);
+    outline: none;
+    font-weight: bold;
+    background-color: rgb(22, 203, 206);
+    display: inline-block;
+}
+
 #resetButton:hover {
     background-color: #323432;
     

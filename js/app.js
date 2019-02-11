@@ -1,5 +1,9 @@
 
 // document.addEventListener("DOMContentLoaded", getWord);
+// document.addEventListener("DOMContentLoaded", audioInit);
+
+
+
 
 //variables
 var correctWords1 = [];
@@ -18,17 +22,10 @@ var levelTwo = ["hot", "not", "shot", "cot", "dot", "got", "jot", "lot", "pot", 
 var levelThree = ["it", "bit", "kit", "fit", "hit", "lit", "knit", "pit", "sit", "wit"];
 
 
-// Colors
-var colors = ["red", "blue", "yellow", "green", "purple", "orange"]
-
-
-// Kaboom random color
-var randomNum = Math.floor(Math.random() * colors.length)
-
-
 //DOM elements
 var enterButton = document.getElementById("submitButton");
 var resetButton = document.getElementById("resetButton");
+var musicButton = document.getElementById("musicButton");
 var currentWord = document.getElementById("word");
 var inputWord = document.getElementById("input");
 var form1 = document.getElementById("form1");
@@ -38,17 +35,31 @@ var wordCollection2 = document.getElementById("wordCollection2");
 var wordCollection3 = document.getElementById("wordCollection3");
 var kaboom = document.getElementById("kaboom");
 
+var audio;
+var isPlaying = false;
+
+musicButton.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!isPlaying) {
+    var audio = new Audio();
+    audio.src = "http://soundimage.org/wp-content/uploads/2016/03/Realm-of-Fantasy_Looping.mp3";
+    audio.play();
+    } else {
+    audio.pause();
+    }      
+});
+
+
 
 // Getting Word 
 function getWord(level) {
     // Get a random index number for word
     var randomNumber;
-
+    
     if (level === 1) {
         randomNumber = Math.floor(Math.random() * levelOne.length)
         // Replace current word with a random word from the levelOne array
         currentWord.textContent = levelOne[randomNumber];
-        kaboom.style.color = colors[randomNum];
         // Remove current word from levelOne array once shown on screen 
         levelOne.splice(randomNumber, 1);
         // Set timer to five seconds if there are still words in the levelOne array
@@ -87,8 +98,9 @@ function getWord(level) {
         } else {
             currentWord.textContent = "Let's try again!";
             console.log("Game Over!");
-    }
-}};
+        }
+    }};
+    
 
 
 form1.addEventListener("submit", function(e) {
@@ -97,8 +109,6 @@ form1.addEventListener("submit", function(e) {
     e.preventDefault();
     // Check if input value equals the current word
     if (inputWord.value === currentWord.textContent) {
-        // kaboom.style.color = colors[randomNum];
-
         if (gameLevel === 1) {
             // If it does, then push the word into the correctWords array
             correctWords1.push(inputWord.value);
@@ -130,9 +140,6 @@ form1.addEventListener("submit", function(e) {
     }
 });
 
-form1.addEventListener("reset", function() {
-    resetButton = form1Reset;
-});
 
 getWord(gameLevel);
 
