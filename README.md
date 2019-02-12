@@ -1,6 +1,11 @@
 # **KA-BOOM!**
 
-Ka-boom! is a free typing game for children. The main objectives of this game are for students to have an easily accessible typing tool, and to have a fun learning experience. 
+Ka-boom! is a free typing game for children. The main objectives of this game are for students to have an easily accessible typing tool, and to have a fun learning experience.
+
+Currently, there are three levels to play.
+    * Level One - Words need to be correctly typed within 5 seconds
+    * Level Two - Words need to be correctly typed within 3 seconds
+    * Level Three - Words need to be correctly typed within 1 second
 
 ## Preview:
 ![Image of Ka-Boom](https://github.com/sangchoi/project-one/blob/master/img/screenshot.png)

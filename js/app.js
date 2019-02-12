@@ -31,6 +31,7 @@ var wordCollection1 = document.getElementById("wordCollection1");
 var wordCollection2 = document.getElementById("wordCollection2");
 var wordCollection3 = document.getElementById("wordCollection3");
 
+// Button Sounds
 function clickSound() {
     var clicked = new Audio();
     clicked.src = "sounds/399198__spiceprogram__xylophone1-basic.wav";
@@ -104,11 +105,11 @@ function getWord(level) {
     } else if (level ===2) {
         currentWord.style.color = "#5A5AFE";
         randomNumber = Math.floor(Math.random() * levelTwo.length)
-        // Replace current word with a random word from the levelOne array
+        // Replace current word with a random word from the levelTwo array
         currentWord.textContent = levelTwo[randomNumber];
-        // Remove current word from levelOne array once shown on screen 
+        // Remove current word from levelTwo array once shown on screen 
         levelTwo.splice(randomNumber, 1);
-        // Set timer to five seconds if there are still words in the levelOne array
+        // Set timer to three seconds if there are still words in the levelTwo array
         if (levelTwo.length > 0) {
             timer = setTimeout(() => getWord(level), 3000);
         } else {
@@ -118,11 +119,11 @@ function getWord(level) {
     } else {
         currentWord.style.color = "rgb(16, 123, 50)";
         randomNumber = Math.floor(Math.random() * levelThree.length)
-        // Replace current word with a random word from the levelOne array
+        // Replace current word with a random word from the levelThree array
         currentWord.textContent = levelThree[randomNumber];
-        // Remove current word from levelOne array once shown on screen 
+        // Remove current word from levelThree array once shown on screen 
         levelThree.splice(randomNumber, 1);
-        // Set timer to five seconds if there are still words in the levelOne array
+        // Set timer to one second if there are still words in the levelThree array
         if (levelThree.length > 0) {
             timer = setTimeout(() => getWord(level), 1000);
         } else {
@@ -161,7 +162,7 @@ form1.addEventListener("submit", function(e) {
         getWord(gameLevel);
         console.log("You have a match!")
         console.log(correctWords);
-        // return true;
+        
     } else {
         console.log("Incorrect");
         // Clears input value once entered
@@ -170,62 +171,11 @@ form1.addEventListener("submit", function(e) {
         // timer();
         clearTimeout(timer);
         getWord(gameLevel);
-        // return false;
+       
     }
 });
 
 
 getWord(gameLevel);
 
-
-////////////////// secondLevel ////////////////////////
-
-// function secondLevel() {
-//     if (levelOne.length === 0 && correctWords.length >= 8) {
-//         // Get a random index number for word
-//         var randomNumber = Math.floor(Math.random() * levelTwo.length)
-//         // Replace current word with a random word from the levelTwo array
-//         currentWord.textContent = levelTwo[randomNumber];
-//         currentWord.style.color = "#5A5AFE";
-//         // Remove current word from levelTwo array once shown on screen 
-//         levelTwo.splice(randomNumber, 1);
-//         // Set timer to five seconds if there are still words in the levelTwo array
-//         if (levelTwo.length > 0) {
-//         timer = setTimeout(secondLevel, 3000);
-//         } else {
-//         currentWord.textContent = "Let's try again!";
-//     }
-// }
-// }
-
-
-// if (levelOne.length === 0 && correctWords.length >= 8) {
-// form1.addEventListener("submit", function(e) {
-//     console.log(currentWord, inputWord.value);
-//     // console.log({currentWord, input: inputWord.value});
-//     e.preventDefault();
-//     // Check if input value equals the current word
-//     if (inputWord.value === currentWord.textContent) {
-//         kaboom = colors[randomNum];
-//         // If it does, then push the word into the correctWords array
-//         correctWords2.push(inputWord.value);
-//         console.log("wordcollection2:", wordCollection2);
-//         // The words in the array will then be collected and shown on the page
-//         wordCollection2.textContent = "Level Two: " + correctWords2;
-//         // Clears input value once entered
-//         inputWord.value = "";
-//         clearTimeout(timer);
-//         secondLevel();
-//         console.log("You have a match!")
-//         console.log(correctWords2);
-//     } else {
-//         console.log("Incorrect");
-//         // Clears input value once entered
-//         inputWord.value = "";
-//         // timer();
-//         clearTimeout(timer);
-//         secondLevel();
-//     }
-// });
-// }
 
