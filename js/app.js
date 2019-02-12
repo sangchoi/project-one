@@ -33,7 +33,7 @@ var wordCollection3 = document.getElementById("wordCollection3");
 
 function clickSound() {
     var clicked = new Audio();
-    clicked.src = "../sounds/399198__spiceprogram__xylophone1-basic.wav";
+    clicked.src = "sounds/399198__spiceprogram__xylophone1-basic.wav";
     clicked.volume = .1;
     clicked.play();
 };
@@ -42,7 +42,7 @@ function clickSound() {
 // Input correct sound
 function explosion() {
     var bomb = new Audio();
-    bomb.src = "../sounds/Laser_Cannon-Mike_Koenig-797224747.mp3";
+    bomb.src = "sounds/Laser_Cannon-Mike_Koenig-797224747.mp3";
     bomb.volume = .1;
     bomb.play();
 };
@@ -50,7 +50,7 @@ function explosion() {
 // Input incorrect sound
 function incorrectSound() {
     var laser = new Audio();
-    laser.src = "../sounds/55836__sergenious__laser2.wav";
+    laser.src = "sounds/55836__sergenious__laser2.wav";
     laser.volume = .9;
     laser.play();
 };
@@ -58,7 +58,7 @@ function incorrectSound() {
 // Background music will play when audioInit is called
 function audioInit() {
     var audio = new Audio();
-    audio.src = "../sounds/Realm-of-Fantasy_Looping.mp3";
+    audio.src = "sounds/Realm-of-Fantasy_Looping.mp3";
     audio.volume = .1;
     audio.play();
 
@@ -124,7 +124,7 @@ function getWord(level) {
         levelThree.splice(randomNumber, 1);
         // Set timer to five seconds if there are still words in the levelOne array
         if (levelThree.length > 0) {
-            timer = setTimeout(() => getWord(level), 2000);
+            timer = setTimeout(() => getWord(level), 1000);
         } else {
             currentWord.textContent = "Let's try again!";
             console.log("Game Over!");
