@@ -3,7 +3,7 @@
 Ka-boom! is a free typing game for children. The main objectives of this game are for students to have an easily accessible typing tool, and to have a fun learning experience. 
 
 ## Preview:
-![Image of Ka-Boom](../img/Screenshot.png)
+![Image of Ka-Boom](./img/Screenshot.png)
 
 ## Technology and Languages Used:
 HTML, CSS, and Javascript were used to create Kaboom!
